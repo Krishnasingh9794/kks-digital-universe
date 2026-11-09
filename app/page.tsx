@@ -1,101 +1,240 @@
-import Image from "next/image";
+import Scene3D from "@/components/Scene3D";
+const skills = [
+  { name: "Frontend Development", detail: "HTML · CSS · JavaScript · React · Tailwind" },
+  { name: "Backend Development", detail: "Node.js · Python · FastAPI · Flask" },
+  { name: "Programming", detail: "C · C++ · Java · Python" },
+  { name: "Database & Cloud", detail: "MongoDB · Supabase" },
+  { name: "Creative Technology", detail: "Figma · Blender · UI/UX" },
+  { name: "Emerging Technology", detail: "AI/ML · Android Development" },
+];
+
+const projects = [
+  {
+    number: "01",
+    name: "RailOpt AI",
+    description: "AI-powered automatic block planning concept to maximize asset availability for Indian Railways.",
+    tags: ["AI", "Railways", "Optimization"],
+  },
+  {
+    number: "02",
+    name: "Raktsanchar",
+    description: "A blood delivery platform connecting urgent requests, inventory, hospitals and delivery partners.",
+    tags: ["Mobile App", "Healthcare", "UI/UX"],
+  },
+  {
+    number: "03",
+    name: "EduFocus Solutions",
+    description: "A full-stack web platform concept focused on reducing student dropout rates.",
+    tags: ["Full Stack", "Education"],
+  },
+  {
+    number: "04",
+    name: "ShopZone",
+    description: "A sales analytics system for organizing product, customer and order information.",
+    tags: ["Analytics", "Database"],
+  },
+  {
+    number: "05",
+    name: "Dual-Screen Motion Controller",
+    description: "A phone-as-gamepad concept using WebSockets for real-time interaction between two screens.",
+    tags: ["WebSockets", "JavaScript"],
+  },
+  {
+    number: "06",
+    name: "SmartLibra PMS",
+    description: "A library management system concept for organizing books and library operations.",
+    tags: ["Management", "Database"],
+  },
+];
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main className="site-shell">
+      <div className="container">
+        <header className="topbar">
+          <a href="#home" className="brand">
+            KKS<span>.</span>DEV
+          </a>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          <nav className="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact" className="nav-cta">Let's Talk ↗</a>
+          </nav>
+        </header>
+
+        <section className="hero" id="home">
+          <div className="hero-copy">
+            <div className="eyebrow">
+              <span className="status-dot" />
+              SYSTEM ONLINE / PORTFOLIO 2026
+            </div>
+
+            <h1>
+              KRISHNA
+              <span>KANT SINGH.</span>
+            </h1>
+
+            <p className="hero-description">
+              I build digital experiences at the intersection of code,
+              creativity and technology. Computer Science student,
+              developer and curious mind exploring the future of the web.
+            </p>
+
+            <div className="hero-actions">
+              <a href="#projects" className="primary-btn">Explore Projects ↗</a>
+              <a href="#about" className="secondary-btn">Discover More</a>
+            </div>
+
+            <div className="hero-meta">
+              <div className="meta-item">
+                <strong>06+</strong>
+                <span>Project Concepts</span>
+              </div>
+              <div className="meta-item">
+                <strong>CS</strong>
+                <span>Engineering</span>
+              </div>
+              <div className="meta-item">
+                <strong>∞</strong>
+                <span>Ideas Loading</span>
+              </div>
+            </div>
+          </div>
+
+        <div className="hero-visual">
+          <Scene3D />
+
+          <span className="visual-label one">
+            CREATIVE ENGINE
+          </span>
+
+          <span className="visual-label two">
+            BUILD / CREATE / REPEAT
+          </span>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </section>
+
+        <section className="section" id="about">
+          <div className="section-heading">
+            <div>
+              <div className="section-kicker">01 / THE HUMAN BEHIND THE CODE</div>
+              <h2 className="section-title">Beyond the <span>screen.</span></h2>
+            </div>
+            <p className="section-note">
+              A little about my background, interests and the things that drive me to create.
+            </p>
+          </div>
+
+          <div className="about-grid">
+            <p className="about-copy">
+              I'm <strong>Krishna Kant Singh</strong>, a Computer Science
+              and Engineering student at SRM Institute of Science and
+              Technology, Ramapuram. I enjoy turning ideas into practical
+              digital experiences through development, design and
+              experimentation.
+              <br /><br />
+              From full-stack applications to AI-driven concepts and
+              interactive interfaces, I like exploring how technology
+              can solve real-world problems. I'm continuously learning,
+              building and refining my craft.
+            </p>
+
+            <div>
+              <div className="info-line">
+                <span>EDUCATION</span>
+                <span>B.Tech / Computer Science</span>
+              </div>
+              <div className="info-line">
+                <span>INSTITUTE</span>
+                <span>SRMIST, Ramapuram</span>
+              </div>
+              <div className="info-line">
+                <span>FOCUS</span>
+                <span>Development / UI/UX / AI</span>
+              </div>
+              <div className="info-line">
+                <span>DESIGN TOOLS</span>
+                <span>Figma / Blender</span>
+              </div>
+              <div className="info-line">
+                <span>CURRENT MODE</span>
+                <span>Always Learning ↗</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="section" id="skills">
+          <div className="section-heading">
+            <div>
+              <div className="section-kicker">02 / MY TECH STACK</div>
+              <h2 className="section-title">Tools of the <span>trade.</span></h2>
+            </div>
+            <p className="section-note">
+              Technologies and creative tools I use to bring ideas to life.
+            </p>
+          </div>
+
+          <div className="skill-grid">
+            {skills.map((skill, index) => (
+              <article className="skill-item" key={skill.name}>
+                <span className="skill-index">/ 0{index + 1}</span>
+                <h3>{skill.name}</h3>
+                <p>{skill.detail}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="section" id="projects">
+          <div className="section-heading">
+            <div>
+              <div className="section-kicker">03 / SELECTED WORK</div>
+              <h2 className="section-title">Ideas into <span>reality.</span></h2>
+            </div>
+            <p className="section-note">
+              A selection of projects and concepts across development, analytics, AI and design.
+            </p>
+          </div>
+
+          <div className="project-grid">
+            {projects.map((project) => (
+              <article className="project-item" key={project.number}>
+                <span className="project-index">PROJECT / {project.number}</span>
+                <h3>{project.name}</h3>
+                <p>{project.description}</p>
+                <div>
+                  {project.tags.map((tag) => (
+                    <span className="project-tag" key={tag}>{tag}</span>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="section" id="contact">
+          <div className="contact-panel">
+            <div className="section-kicker">04 / OPEN CHANNEL</div>
+            <h2>Have an idea?<br /><span>Let's build it.</span></h2>
+            <p>
+              Interested in collaboration, creative technology or building
+              something interesting? Let's connect.
+            </p>
+            <a href="mailto:your-email@example.com" className="primary-btn">
+              Start a Conversation ↗
+            </a>
+          </div>
+        </section>
+
+        <footer className="footer">
+          <div>© 2026 KRISHNA KANT SINGH</div>
+          <div>DESIGNED & BUILT WITH <span>♥</span> AND CODE</div>
+          <a href="#home">BACK TO TOP ↑</a>
+        </footer>
+      </div>
+    </main>
   );
 }
