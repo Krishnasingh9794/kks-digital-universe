@@ -60,7 +60,7 @@ export default function Home() {
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
-            <a href="#contact" className="nav-cta">Let's Talk ↗</a>
+            <a href="#contact" className="nav-cta">Let&apos; Talk ↗</a>
           </nav>
         </header>
 
@@ -129,7 +129,7 @@ export default function Home() {
 
           <div className="about-grid">
             <p className="about-copy">
-              I'm <strong>Krishna Kant Singh</strong>, a Computer Science
+              I&apos;m <strong>Krishna Kant Singh</strong>, a Computer Science
               and Engineering student at SRM Institute of Science and
               Technology, Ramapuram. I enjoy turning ideas into practical
               digital experiences through development, design and
@@ -137,7 +137,7 @@ export default function Home() {
               <br /><br />
               From full-stack applications to AI-driven concepts and
               interactive interfaces, I like exploring how technology
-              can solve real-world problems. I'm continuously learning,
+              can solve real-world problems. I&apos;m continuously learning,
               building and refining my craft.
             </p>
 
@@ -218,10 +218,10 @@ export default function Home() {
         <section className="section" id="contact">
           <div className="contact-panel">
             <div className="section-kicker">04 / OPEN CHANNEL</div>
-            <h2>Have an idea?<br /><span>Let's build it.</span></h2>
+            <h2>Have an idea?<br /><span>Let&apos; build it.</span></h2>
             <p>
               Interested in collaboration, creative technology or building
-              something interesting? Let's connect.
+              something interesting? Let&apos; connect.
             </p>
             <a href="mailto:your-email@example.com" className="primary-btn">
               Start a Conversation ↗
